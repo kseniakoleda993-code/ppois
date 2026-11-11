@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ППОИС. Лабораторная работа 1: Исходный файл include/BigInteger.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ППОИС. Лабораторная работа 1
+   </div>
+   <div id="projectbrief">Вектор в трёхмерном пространстве и длинное целое со знаком</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('_big_integer_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">BigInteger.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_big_integer_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef LAB1_BIGINTEGER_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define LAB1_BIGINTEGER_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;iosfwd&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace </span>lab1 {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classlab1_1_1_big_integer.html">   26</a></span><span class="keyword">class </span><a class="code hl_function" href="classlab1_1_1_big_integer.html#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classlab1_1_1_big_integer.html#a5f1d30d40a0021f987fcd1c4ee59893c">   29</a></span>    <a class="code hl_function" href="classlab1_1_1_big_integer.html#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_function" href="classlab1_1_1_big_integer.html#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a>(<span class="keywordtype">long</span> <span class="keywordtype">long</span> value);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">explicit</span> <a class="code hl_function" href="classlab1_1_1_big_integer.html#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a>(<span class="keyword">const</span> std::string&amp; text);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">explicit</span> <span class="keyword">operator</span> <span class="keywordtype">long</span> long() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    std::string <a class="code hl_function" href="classlab1_1_1_big_integer.html#a7b9a296acd98d19e243833ff6cfd072c">toString</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classlab1_1_1_big_integer.html#ae6cf60adc642fb6d52ab90f7a3337250">isNegative</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classlab1_1_1_big_integer.html#a298b6169cf23e394d509034646b7a8e7">isZero</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classlab1_1_1_big_integer.html#a602ddf1746b5cf9a87160e04b56356d9">compareTo</a>(<span class="keyword">const</span> <a class="code hl_function" href="classlab1_1_1_big_integer.html#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a>&amp; other) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_function" href="classlab1_1_1_big_integer.html#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a> <a class="code hl_function" href="classlab1_1_1_big_integer.html#ab82e5252e591e9fe80d89c104cfd78db">operator-</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_function" href="classlab1_1_1_big_integer.html#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a>&amp; <a class="code hl_function" href="classlab1_1_1_big_integer.html#ab0dc6951c4ab7d8719b0648708bf41e4">operator+=</a>(<span class="keyword">const</span> <a class="code hl_function" href="classlab1_1_1_big_integer.html#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a>&amp; other);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <a class="code hl_function" href="classlab1_1_1_big_integer.html#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a>&amp; <a class="code hl_function" href="classlab1_1_1_big_integer.html#ab34e84f137ccd43c0da698b58447ee8c">operator-=</a>(<span class="keyword">const</span> <a class="code hl_function" href="classlab1_1_1_big_integer.html#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a>&amp; other);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <a class="code hl_function" href="classlab1_1_1_big_integer.html#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a>&amp; <a class="code hl_function" href="classlab1_1_1_big_integer.html#aeb04e88694cb12bf4d119ea21ed8607f">operator*=</a>(<span class="keyword">const</span> <a class="code hl_function" href="classlab1_1_1_big_integer.html#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a>&amp; other);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <a class="code hl_function" href="classlab1_1_1_big_integer.html#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a>&amp; <a class="code hl_function" href="classlab1_1_1_big_integer.html#a99ad77518191998dec31988b9390fc87">operator/=</a>(<span class="keyword">const</span> <a class="code hl_function" href="classlab1_1_1_big_integer.html#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a>&amp; other);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_function" href="classlab1_1_1_big_integer.html#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a>&amp; <a class="code hl_function" href="classlab1_1_1_big_integer.html#ad0c2dde08e2070e39027a33bae9fd2ee">operator++</a>();</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <a class="code hl_function" href="classlab1_1_1_big_integer.html#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a> <a class="code hl_function" href="classlab1_1_1_big_integer.html#ad0c2dde08e2070e39027a33bae9fd2ee">operator++</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <a class="code hl_function" href="classlab1_1_1_big_integer.html#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a>&amp; <a class="code hl_function" href="classlab1_1_1_big_integer.html#adcfff76ca764251e90d3df5969b956d1">operator--</a>();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <a class="code hl_function" href="classlab1_1_1_big_integer.html#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a> <a class="code hl_function" href="classlab1_1_1_big_integer.html#adcfff76ca764251e90d3df5969b956d1">operator--</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">void</span> normalize();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordtype">bool</span> negative_ = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    std::vector&lt;std::uint32_t&gt; digits_;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>};</div>
+</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><a class="code hl_class" href="classlab1_1_1_big_integer.html">BigInteger</a> <a class="code hl_function" href="_big_integer_8h.html#ac2f2decda5fc25cbf997158059295c04">operator+</a>(<a class="code hl_class" href="classlab1_1_1_big_integer.html">BigInteger</a> lhs, <span class="keyword">const</span> <a class="code hl_class" href="classlab1_1_1_big_integer.html">BigInteger</a>&amp; rhs);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><a class="code hl_class" href="classlab1_1_1_big_integer.html">BigInteger</a> <a class="code hl_function" href="_big_integer_8h.html#ac90ef5a4d3d35575f9ea4e8f9f4dff27">operator-</a>(<a class="code hl_class" href="classlab1_1_1_big_integer.html">BigInteger</a> lhs, <span class="keyword">const</span> <a class="code hl_class" href="classlab1_1_1_big_integer.html">BigInteger</a>&amp; rhs);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><a class="code hl_class" href="classlab1_1_1_big_integer.html">BigInteger</a> <a class="code hl_function" href="_big_integer_8h.html#abc71211a80a92456bfde7f7a460bdc7f">operator*</a>(<a class="code hl_class" href="classlab1_1_1_big_integer.html">BigInteger</a> lhs, <span class="keyword">const</span> <a class="code hl_class" href="classlab1_1_1_big_integer.html">BigInteger</a>&amp; rhs);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><a class="code hl_class" href="classlab1_1_1_big_integer.html">BigInteger</a> <a class="code hl_function" href="_big_integer_8h.html#a084055f4e7373280395de18cb57f8d2d">operator/</a>(<a class="code hl_class" href="classlab1_1_1_big_integer.html">BigInteger</a> lhs, <span class="keyword">const</span> <a class="code hl_class" href="classlab1_1_1_big_integer.html">BigInteger</a>&amp; rhs);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_big_integer_8h.html#afb7c448a8d70670da1281a6e32284756">operator==</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlab1_1_1_big_integer.html">BigInteger</a>&amp; lhs, <span class="keyword">const</span> <a class="code hl_class" href="classlab1_1_1_big_integer.html">BigInteger</a>&amp; rhs);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_big_integer_8h.html#a441f2432a27a543e803c240baa73ee39">operator!=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlab1_1_1_big_integer.html">BigInteger</a>&amp; lhs, <span class="keyword">const</span> <a class="code hl_class" href="classlab1_1_1_big_integer.html">BigInteger</a>&amp; rhs);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_big_integer_8h.html#afaddd06beca5e67392e307f3389ad990">operator&lt;</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlab1_1_1_big_integer.html">BigInteger</a>&amp; lhs, <span class="keyword">const</span> <a class="code hl_class" href="classlab1_1_1_big_integer.html">BigInteger</a>&amp; rhs);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_big_integer_8h.html#a3266072c60648ee1ee0d395c88e6a127">operator&lt;=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlab1_1_1_big_integer.html">BigInteger</a>&amp; lhs, <span class="keyword">const</span> <a class="code hl_class" href="classlab1_1_1_big_integer.html">BigInteger</a>&amp; rhs);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_big_integer_8h.html#a5a423a2e69471276c8ed0272c15d706e">operator&gt;</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlab1_1_1_big_integer.html">BigInteger</a>&amp; lhs, <span class="keyword">const</span> <a class="code hl_class" href="classlab1_1_1_big_integer.html">BigInteger</a>&amp; rhs);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_big_integer_8h.html#ac2a474ea96c42d80f30d87c3716dc134">operator&gt;=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlab1_1_1_big_integer.html">BigInteger</a>&amp; lhs, <span class="keyword">const</span> <a class="code hl_class" href="classlab1_1_1_big_integer.html">BigInteger</a>&amp; rhs);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>std::ostream&amp; <a class="code hl_function" href="_big_integer_8h.html#a279a875136880210d8c296497c35b5e6">operator&lt;&lt;</a>(std::ostream&amp; out, <span class="keyword">const</span> <a class="code hl_class" href="classlab1_1_1_big_integer.html">BigInteger</a>&amp; value);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>std::istream&amp; <a class="code hl_function" href="_big_integer_8h.html#afcd5bd9ed68cb0d6b2d9c50ff668d0a6">operator&gt;&gt;</a>(std::istream&amp; in, <a class="code hl_class" href="classlab1_1_1_big_integer.html">BigInteger</a>&amp; value);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>}  <span class="comment">// namespace lab1</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="preprocessor">#endif  </span><span class="comment">// LAB1_BIGINTEGER_H</span></div>
+<div class="ttc" id="a_big_integer_8h_html_a084055f4e7373280395de18cb57f8d2d"><div class="ttname"><a href="_big_integer_8h.html#a084055f4e7373280395de18cb57f8d2d">lab1::operator/</a></div><div class="ttdeci">BigInteger operator/(BigInteger lhs, const BigInteger &amp;rhs)</div><div class="ttdef"><b>Определения</b> BigInteger.cpp:277</div></div>
+<div class="ttc" id="a_big_integer_8h_html_a279a875136880210d8c296497c35b5e6"><div class="ttname"><a href="_big_integer_8h.html#a279a875136880210d8c296497c35b5e6">lab1::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, const BigInteger &amp;value)</div><div class="ttdoc">Вывод в десятичной записи.</div><div class="ttdef"><b>Определения</b> BigInteger.cpp:286</div></div>
+<div class="ttc" id="a_big_integer_8h_html_a3266072c60648ee1ee0d395c88e6a127"><div class="ttname"><a href="_big_integer_8h.html#a3266072c60648ee1ee0d395c88e6a127">lab1::operator&lt;=</a></div><div class="ttdeci">bool operator&lt;=(const BigInteger &amp;lhs, const BigInteger &amp;rhs)</div><div class="ttdoc">Меньше или равно.</div><div class="ttdef"><b>Определения</b> BigInteger.cpp:282</div></div>
+<div class="ttc" id="a_big_integer_8h_html_a441f2432a27a543e803c240baa73ee39"><div class="ttname"><a href="_big_integer_8h.html#a441f2432a27a543e803c240baa73ee39">lab1::operator!=</a></div><div class="ttdeci">bool operator!=(const BigInteger &amp;lhs, const BigInteger &amp;rhs)</div><div class="ttdoc">Неравенство.</div><div class="ttdef"><b>Определения</b> BigInteger.cpp:280</div></div>
+<div class="ttc" id="a_big_integer_8h_html_a5a423a2e69471276c8ed0272c15d706e"><div class="ttname"><a href="_big_integer_8h.html#a5a423a2e69471276c8ed0272c15d706e">lab1::operator&gt;</a></div><div class="ttdeci">bool operator&gt;(const BigInteger &amp;lhs, const BigInteger &amp;rhs)</div><div class="ttdoc">Больше.</div><div class="ttdef"><b>Определения</b> BigInteger.cpp:283</div></div>
+<div class="ttc" id="a_big_integer_8h_html_abc71211a80a92456bfde7f7a460bdc7f"><div class="ttname"><a href="_big_integer_8h.html#abc71211a80a92456bfde7f7a460bdc7f">lab1::operator*</a></div><div class="ttdeci">BigInteger operator*(BigInteger lhs, const BigInteger &amp;rhs)</div><div class="ttdef"><b>Определения</b> BigInteger.cpp:276</div></div>
+<div class="ttc" id="a_big_integer_8h_html_ac2a474ea96c42d80f30d87c3716dc134"><div class="ttname"><a href="_big_integer_8h.html#ac2a474ea96c42d80f30d87c3716dc134">lab1::operator&gt;=</a></div><div class="ttdeci">bool operator&gt;=(const BigInteger &amp;lhs, const BigInteger &amp;rhs)</div><div class="ttdoc">Больше или равно.</div><div class="ttdef"><b>Определения</b> BigInteger.cpp:284</div></div>
+<div class="ttc" id="a_big_integer_8h_html_ac2f2decda5fc25cbf997158059295c04"><div class="ttname"><a href="_big_integer_8h.html#ac2f2decda5fc25cbf997158059295c04">lab1::operator+</a></div><div class="ttdeci">BigInteger operator+(BigInteger lhs, const BigInteger &amp;rhs)</div><div class="ttdef"><b>Определения</b> BigInteger.cpp:274</div></div>
+<div class="ttc" id="a_big_integer_8h_html_ac90ef5a4d3d35575f9ea4e8f9f4dff27"><div class="ttname"><a href="_big_integer_8h.html#ac90ef5a4d3d35575f9ea4e8f9f4dff27">lab1::operator-</a></div><div class="ttdeci">BigInteger operator-(BigInteger lhs, const BigInteger &amp;rhs)</div><div class="ttdef"><b>Определения</b> BigInteger.cpp:275</div></div>
+<div class="ttc" id="a_big_integer_8h_html_afaddd06beca5e67392e307f3389ad990"><div class="ttname"><a href="_big_integer_8h.html#afaddd06beca5e67392e307f3389ad990">lab1::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const BigInteger &amp;lhs, const BigInteger &amp;rhs)</div><div class="ttdoc">Меньше.</div><div class="ttdef"><b>Определения</b> BigInteger.cpp:281</div></div>
+<div class="ttc" id="a_big_integer_8h_html_afb7c448a8d70670da1281a6e32284756"><div class="ttname"><a href="_big_integer_8h.html#afb7c448a8d70670da1281a6e32284756">lab1::operator==</a></div><div class="ttdeci">bool operator==(const BigInteger &amp;lhs, const BigInteger &amp;rhs)</div><div class="ttdoc">Равенство (работает и для сравнения с обычным целым).</div><div class="ttdef"><b>Определения</b> BigInteger.cpp:279</div></div>
+<div class="ttc" id="a_big_integer_8h_html_afcd5bd9ed68cb0d6b2d9c50ff668d0a6"><div class="ttname"><a href="_big_integer_8h.html#afcd5bd9ed68cb0d6b2d9c50ff668d0a6">lab1::operator&gt;&gt;</a></div><div class="ttdeci">std::istream &amp; operator&gt;&gt;(std::istream &amp;in, BigInteger &amp;value)</div><div class="ttdoc">Чтение числа из потока (одно слово).</div><div class="ttdef"><b>Определения</b> BigInteger.cpp:290</div></div>
+<div class="ttc" id="aclasslab1_1_1_big_integer_html"><div class="ttname"><a href="classlab1_1_1_big_integer.html">lab1::BigInteger</a></div><div class="ttdoc">Знаковое целое число неограниченной длины.</div><div class="ttdef"><b>Определения</b> BigInteger.h:26</div></div>
+<div class="ttc" id="aclasslab1_1_1_big_integer_html_a298b6169cf23e394d509034646b7a8e7"><div class="ttname"><a href="classlab1_1_1_big_integer.html#a298b6169cf23e394d509034646b7a8e7">lab1::BigInteger::isZero</a></div><div class="ttdeci">bool isZero() const</div><div class="ttdef"><b>Определения</b> BigInteger.cpp:199</div></div>
+<div class="ttc" id="aclasslab1_1_1_big_integer_html_a5f1d30d40a0021f987fcd1c4ee59893c"><div class="ttname"><a href="classlab1_1_1_big_integer.html#a5f1d30d40a0021f987fcd1c4ee59893c">lab1::BigInteger::BigInteger</a></div><div class="ttdeci">BigInteger()=default</div><div class="ttdoc">Создаёт число 0.</div></div>
+<div class="ttc" id="aclasslab1_1_1_big_integer_html_a602ddf1746b5cf9a87160e04b56356d9"><div class="ttname"><a href="classlab1_1_1_big_integer.html#a602ddf1746b5cf9a87160e04b56356d9">lab1::BigInteger::compareTo</a></div><div class="ttdeci">int compareTo(const BigInteger &amp;other) const</div><div class="ttdef"><b>Определения</b> BigInteger.cpp:201</div></div>
+<div class="ttc" id="aclasslab1_1_1_big_integer_html_a7b9a296acd98d19e243833ff6cfd072c"><div class="ttname"><a href="classlab1_1_1_big_integer.html#a7b9a296acd98d19e243833ff6cfd072c">lab1::BigInteger::toString</a></div><div class="ttdeci">std::string toString() const</div><div class="ttdef"><b>Определения</b> BigInteger.cpp:185</div></div>
+<div class="ttc" id="aclasslab1_1_1_big_integer_html_a99ad77518191998dec31988b9390fc87"><div class="ttname"><a href="classlab1_1_1_big_integer.html#a99ad77518191998dec31988b9390fc87">lab1::BigInteger::operator/=</a></div><div class="ttdeci">BigInteger &amp; operator/=(const BigInteger &amp;other)</div><div class="ttdoc">Деление с усечением к нулю.</div><div class="ttdef"><b>Определения</b> BigInteger.cpp:241</div></div>
+<div class="ttc" id="aclasslab1_1_1_big_integer_html_ab0dc6951c4ab7d8719b0648708bf41e4"><div class="ttname"><a href="classlab1_1_1_big_integer.html#ab0dc6951c4ab7d8719b0648708bf41e4">lab1::BigInteger::operator+=</a></div><div class="ttdeci">BigInteger &amp; operator+=(const BigInteger &amp;other)</div><div class="ttdoc">Сложение.</div><div class="ttdef"><b>Определения</b> BigInteger.cpp:216</div></div>
+<div class="ttc" id="aclasslab1_1_1_big_integer_html_ab34e84f137ccd43c0da698b58447ee8c"><div class="ttname"><a href="classlab1_1_1_big_integer.html#ab34e84f137ccd43c0da698b58447ee8c">lab1::BigInteger::operator-=</a></div><div class="ttdeci">BigInteger &amp; operator-=(const BigInteger &amp;other)</div><div class="ttdoc">Вычитание.</div><div class="ttdef"><b>Определения</b> BigInteger.cpp:231</div></div>
+<div class="ttc" id="aclasslab1_1_1_big_integer_html_ab82e5252e591e9fe80d89c104cfd78db"><div class="ttname"><a href="classlab1_1_1_big_integer.html#ab82e5252e591e9fe80d89c104cfd78db">lab1::BigInteger::operator-</a></div><div class="ttdeci">BigInteger operator-() const</div><div class="ttdef"><b>Определения</b> BigInteger.cpp:209</div></div>
+<div class="ttc" id="aclasslab1_1_1_big_integer_html_ad0c2dde08e2070e39027a33bae9fd2ee"><div class="ttname"><a href="classlab1_1_1_big_integer.html#ad0c2dde08e2070e39027a33bae9fd2ee">lab1::BigInteger::operator++</a></div><div class="ttdeci">BigInteger &amp; operator++()</div><div class="ttdoc">Префиксный инкремент.</div><div class="ttdef"><b>Определения</b> BigInteger.cpp:252</div></div>
+<div class="ttc" id="aclasslab1_1_1_big_integer_html_adcfff76ca764251e90d3df5969b956d1"><div class="ttname"><a href="classlab1_1_1_big_integer.html#adcfff76ca764251e90d3df5969b956d1">lab1::BigInteger::operator--</a></div><div class="ttdeci">BigInteger &amp; operator--()</div><div class="ttdoc">Префиксный декремент.</div><div class="ttdef"><b>Определения</b> BigInteger.cpp:253</div></div>
+<div class="ttc" id="aclasslab1_1_1_big_integer_html_ae6cf60adc642fb6d52ab90f7a3337250"><div class="ttname"><a href="classlab1_1_1_big_integer.html#ae6cf60adc642fb6d52ab90f7a3337250">lab1::BigInteger::isNegative</a></div><div class="ttdeci">bool isNegative() const</div><div class="ttdef"><b>Определения</b> BigInteger.cpp:198</div></div>
+<div class="ttc" id="aclasslab1_1_1_big_integer_html_aeb04e88694cb12bf4d119ea21ed8607f"><div class="ttname"><a href="classlab1_1_1_big_integer.html#aeb04e88694cb12bf4d119ea21ed8607f">lab1::BigInteger::operator*=</a></div><div class="ttdeci">BigInteger &amp; operator*=(const BigInteger &amp;other)</div><div class="ttdoc">Умножение.</div><div class="ttdef"><b>Определения</b> BigInteger.cpp:233</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>include</b></li><li class="navelem"><a href="_big_integer_8h.html">BigInteger.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

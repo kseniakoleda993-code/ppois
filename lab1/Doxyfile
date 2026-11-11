@@ -1,0 +1,17 @@
+# Минимальная конфигурация Doxygen. Генерация: doxygen Doxyfile (из каталога lab1).
+PROJECT_NAME           = "ППОИС. Лабораторная работа 1"
+PROJECT_BRIEF          = "Вектор в трёхмерном пространстве и длинное целое со знаком"
+OUTPUT_DIRECTORY       = docs
+OUTPUT_LANGUAGE        = Russian
+INPUT_ENCODING         = UTF-8
+INPUT                  = include src cli README.md
+FILE_PATTERNS          = *.h *.cpp *.md
+RECURSIVE              = YES
+USE_MDFILE_AS_MAINPAGE = README.md
+EXTRACT_ALL            = NO
+EXTRACT_PRIVATE        = YES
+WARN_IF_UNDOCUMENTED   = YES
+QUIET                  = YES
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+HAVE_DOT               = NO

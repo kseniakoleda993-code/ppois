@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ППОИС. Лабораторная работа 1: Лабораторная работа №1. Основы ООП на C++</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ППОИС. Лабораторная работа 1
+   </div>
+   <div id="projectbrief">Вектор в трёхмерном пространстве и длинное целое со знаком</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('md__r_e_a_d_m_e.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Лабораторная работа №1. Основы ООП на C++ </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a></p>
+<p>Варианты: <b>1.1 Вектор</b> и <b>1.6.3 Длинное целое со знаком</b>. Язык: C++17.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
+Структура</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Путь  </th><th class="markdownTableHeadNone">Назначение  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">include/</span>, <span class="tt">src/</span>  </td><td class="markdownTableBodyNone">Классы предметной области: <span class="tt">Point3D</span>, <span class="tt">Vector3D</span>, <span class="tt">BigInteger</span> (объявления в <span class="tt">.h</span>, реализация в <span class="tt">.cpp</span>)  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">cli/</span>  </td><td class="markdownTableBodyNone">Консольный интерфейс: <span class="tt">Menu</span>, <span class="tt">VectorMenu</span>, <span class="tt">BigIntegerMenu</span>, <span class="tt"><a class="el" href="main_8cpp.html" title="Точка входа: главное меню лабораторной работы №1.">main.cpp</a></span>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">tests/</span>  </td><td class="markdownTableBodyNone">Модульные тесты (GoogleTest)  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">Doxyfile</span>  </td><td class="markdownTableBodyNone">Конфигурация Doxygen  </td></tr>
+</table>
+<p>Классы из <span class="tt">src/</span> не знают о консоли, а интерфейс из <span class="tt">cli/</span> работает с ними только через публичные методы.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
+Сборка, запуск, тесты</h1>
+<div class="fragment"><div class="line">cmake -S . -B build -DCMAKE_BUILD_TYPE=Release</div>
+<div class="line">cmake --build build --parallel</div>
+<div class="line">./build/lab1_app                 # меню</div>
+<div class="line">cd build &amp;&amp; ctest --output-on-failure   # тесты</div>
+</div><!-- fragment --><p>Покрытие (нужен <span class="tt">gcovr</span>):</p>
+<div class="fragment"><div class="line">cmake -S . -B build-cov -DCMAKE_BUILD_TYPE=Debug -DLAB1_ENABLE_COVERAGE=ON</div>
+<div class="line">cmake --build build-cov --parallel &amp;&amp; (cd build-cov &amp;&amp; ctest)</div>
+<div class="line">gcovr -r . --filter &#39;src/&#39; --filter &#39;cli/&#39; --exclude &#39;cli/main.cpp&#39; --print-summary</div>
+</div><!-- fragment --><p>Документация: <span class="tt">doxygen Doxyfile</span>, результат в <span class="tt">docs/html/index.html</span>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
+Вектор (<span class="tt">Vector3D</span>)</h1>
+<p>Вектор хранит координаты начала и конца (<span class="tt">Point3D</span>). Результат любой операции сохраняет <b>начало первого операнда</b>, конец = начало + результирующее смещение.</p>
+<ul>
+<li><span class="tt">getBegin()</span>, <span class="tt">getEnd()</span>, <span class="tt">getDirection()</span>, <span class="tt">length()</span></li>
+<li><span class="tt">+</span>, <span class="tt">+=</span>, <span class="tt">-</span>, <span class="tt">-=</span> - покоординатно по смещениям</li>
+<li><span class="tt">*</span>, <span class="tt">*=</span> между векторами - <b>векторное</b> произведение; <span class="tt">*</span>, <span class="tt">*=</span> с числом (в т.ч. <span class="tt">число * вектор</span>)</li>
+<li><span class="tt">/</span>, <span class="tt">/=</span> - деление на число (на ноль - <span class="tt">std::domain_error</span>)</li>
+<li><span class="tt">cosineWith()</span> и оператор <span class="tt">^</span> - косинус угла (для нулевого вектора - <span class="tt">std::domain_error</span>)</li>
+<li><span class="tt">&lt;</span>, <span class="tt">&lt;=</span>, <span class="tt">&gt;</span>, <span class="tt">&gt;=</span> - сравнение <b>по длине</b> (с точностью <span class="tt">kCoordinateEpsilon</span>), <span class="tt">==</span>, <span class="tt">!=</span> - по координатам обоих концов</li>
+<li><span class="tt">&lt;&lt;</span>, <span class="tt">&gt;&gt;</span> - формат <span class="tt">[(x, y, z), (x, y, z)]</span></li>
+</ul>
+<blockquote class="doxtable">
+<p>В PDF-методичке написано «деление двух векторов» и «произведение двух векторов», в актуальном <span class="tt">lab1.md</span> на GitHub - «деление на число» и «векторное произведение». Реализован вариант из <span class="tt">lab1.md</span>. Если преподаватель требует иное, скажите - переделаю. </p>
+</blockquote>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+Длинное целое (<span class="tt">BigInteger</span>)</h1>
+<p>Знак + модуль в системе счисления 10^9 (<span class="tt">std::vector&lt;uint32_t&gt;</span>, младшая цифра первая).</p>
+<ul>
+<li>конструкторы от <span class="tt">long long</span> и от строки, копирование/присваивание (правило нуля: вектор копируется сам)</li>
+<li><span class="tt">+</span>, <span class="tt">-</span>, <span class="tt">*</span>, <span class="tt">/</span> и составные формы; деление усекает к нулю</li>
+<li>операции с обычным целым работают через неявный конструктор из <span class="tt">long long</span> (<span class="tt">a + 5</span>, <span class="tt">5 + a</span>, <span class="tt">a &lt; 5</span>)</li>
+<li><span class="tt">++</span>, <span class="tt">--</span> (префиксные и постфиксные), унарный <span class="tt">-</span></li>
+<li><span class="tt">==</span>, <span class="tt">!=</span>, <span class="tt">&lt;</span>, <span class="tt">&lt;=</span>, <span class="tt">&gt;</span>, <span class="tt">&gt;=</span></li>
+<li><span class="tt">explicit operator long long()</span> (при переполнении - <span class="tt">std::overflow_error</span>)</li>
+<li><span class="tt">&lt;&lt;</span>, <span class="tt">&gt;&gt;</span>, <span class="tt">toString()</span></li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+Вопросы для защиты (кратко)</h1>
+<ul>
+<li><b>Когда нужен конструктор копирования?</b> Когда класс владеет ресурсом (память, файл), и побитовое копирование привело бы к двойному освобождению/общему состоянию. У наших классов ресурсами управляет <span class="tt">std::vector</span>, поэтому достаточно сгенерированного компилятором (правило нуля).</li>
+<li><b>Разница между <span class="tt">+</span> и <span class="tt">+=</span>?</b> <span class="tt">+=</span> меняет левый операнд и возвращает ссылку на себя (<span class="tt">*this</span>), <span class="tt">+</span> создаёт новый объект: берёт левый операнд по значению, вызывает <span class="tt">+=</span> и возвращает копию.</li>
+<li><b>Зачем <span class="tt">const</span>?</b> В аргументах (<span class="tt">const T&amp;</span>) - не копировать и не менять; после метода - метод не меняет объект; позволяет вызывать методы у константных объектов.</li>
+<li><b>Почему <span class="tt">operator&lt;&lt;</span> не член класса?</b> Левый операнд - поток, а не наш объект.</li>
+<li><b>Почему <span class="tt">explicit</span> у <span class="tt">operator long long</span>?</b> Иначе возможны неявные преобразования и неоднозначность перегрузок.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+Требования курса (из <span class="tt">common_requirements.md</span>)</h1>
+<ul>
+<li>один репозиторий на все лабораторные, папка <span class="tt">lab1</span>; работа в feature-ветке, в <span class="tt">main</span> - через Pull Request;</li>
+<li>содержательные сообщения коммитов; в репозитории нет артефактов сборки (см. <span class="tt">.gitignore</span>);</li>
+<li>CI (<span class="tt">.github/workflows/ci.yml</span>): тесты, покрытие &gt;= 90%, cppcheck, Doxygen, релиз артефакта по тегу <span class="tt">v*</span>. </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

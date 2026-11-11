@@ -1,0 +1,14 @@
+﻿**/build/
+**/cmake-build-*/
+.vs/
+*.user
+*.suo
+*.pdb
+*.ilk
+*.obj
+*.o
+*.exe
+*.dll
+*.lib
+*.a
+Testing/

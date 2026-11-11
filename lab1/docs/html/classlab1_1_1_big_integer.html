@@ -1,0 +1,529 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ППОИС. Лабораторная работа 1: Класс lab1::BigInteger</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ППОИС. Лабораторная работа 1
+   </div>
+   <div id="projectbrief">Вектор в трёхмерном пространстве и длинное целое со знаком</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('classlab1_1_1_big_integer.html','','classlab1_1_1_big_integer-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс lab1::BigInteger</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Знаковое целое число неограниченной длины.  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_big_integer_8h_source.html">BigInteger.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a5f1d30d40a0021f987fcd1c4ee59893c" id="r_a5f1d30d40a0021f987fcd1c4ee59893c"><td class="memItemLeft"><a id="a5f1d30d40a0021f987fcd1c4ee59893c" name="a5f1d30d40a0021f987fcd1c4ee59893c"></a>
+&#160;</td><td class="memItemRight"><b>BigInteger</b> ()=default</td></tr>
+<tr class="memdesc:a5f1d30d40a0021f987fcd1c4ee59893c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создаёт число 0. <br /></td></tr>
+<tr class="memitem:aca0870e7c8dee4a4bae8a6237d0c9758" id="r_aca0870e7c8dee4a4bae8a6237d0c9758"><td class="memItemLeft"><a id="aca0870e7c8dee4a4bae8a6237d0c9758" name="aca0870e7c8dee4a4bae8a6237d0c9758"></a>
+&#160;</td><td class="memItemRight"><b>BigInteger</b> (long long value)</td></tr>
+<tr class="memdesc:aca0870e7c8dee4a4bae8a6237d0c9758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создаёт число из встроенного целого (в том числе из LLONG_MIN). <br /></td></tr>
+<tr class="memitem:a00ed3dbed8e7325907255a0d9b451026" id="r_a00ed3dbed8e7325907255a0d9b451026"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a00ed3dbed8e7325907255a0d9b451026">BigInteger</a> (const std::string &amp;text)</td></tr>
+<tr class="memdesc:a00ed3dbed8e7325907255a0d9b451026"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создаёт число из строки вида "[+|-]цифры".  <br /></td></tr>
+<tr class="memitem:ab37ef28901ab2e7dd101c9eb03f1cee1" id="r_ab37ef28901ab2e7dd101c9eb03f1cee1"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab37ef28901ab2e7dd101c9eb03f1cee1">operator long long</a> () const</td></tr>
+<tr class="memdesc:ab37ef28901ab2e7dd101c9eb03f1cee1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Приведение к встроенному целому типу.  <br /></td></tr>
+<tr class="memitem:a7b9a296acd98d19e243833ff6cfd072c" id="r_a7b9a296acd98d19e243833ff6cfd072c"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a7b9a296acd98d19e243833ff6cfd072c">toString</a> () const</td></tr>
+<tr class="memitem:ae6cf60adc642fb6d52ab90f7a3337250" id="r_ae6cf60adc642fb6d52ab90f7a3337250"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ae6cf60adc642fb6d52ab90f7a3337250">isNegative</a> () const</td></tr>
+<tr class="memitem:a298b6169cf23e394d509034646b7a8e7" id="r_a298b6169cf23e394d509034646b7a8e7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a298b6169cf23e394d509034646b7a8e7">isZero</a> () const</td></tr>
+<tr class="memitem:a602ddf1746b5cf9a87160e04b56356d9" id="r_a602ddf1746b5cf9a87160e04b56356d9"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a602ddf1746b5cf9a87160e04b56356d9">compareTo</a> (const <a class="el" href="#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a> &amp;other) const</td></tr>
+<tr class="memitem:ab82e5252e591e9fe80d89c104cfd78db" id="r_ab82e5252e591e9fe80d89c104cfd78db"><td class="memItemLeft"><a class="el" href="#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab82e5252e591e9fe80d89c104cfd78db">operator-</a> () const</td></tr>
+<tr class="memitem:ab0dc6951c4ab7d8719b0648708bf41e4" id="r_ab0dc6951c4ab7d8719b0648708bf41e4"><td class="memItemLeft"><a class="el" href="#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ab0dc6951c4ab7d8719b0648708bf41e4">operator+=</a> (const <a class="el" href="#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a> &amp;other)</td></tr>
+<tr class="memdesc:ab0dc6951c4ab7d8719b0648708bf41e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сложение.  <br /></td></tr>
+<tr class="memitem:ab34e84f137ccd43c0da698b58447ee8c" id="r_ab34e84f137ccd43c0da698b58447ee8c"><td class="memItemLeft"><a class="el" href="#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ab34e84f137ccd43c0da698b58447ee8c">operator-=</a> (const <a class="el" href="#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a> &amp;other)</td></tr>
+<tr class="memdesc:ab34e84f137ccd43c0da698b58447ee8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вычитание.  <br /></td></tr>
+<tr class="memitem:aeb04e88694cb12bf4d119ea21ed8607f" id="r_aeb04e88694cb12bf4d119ea21ed8607f"><td class="memItemLeft"><a class="el" href="#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aeb04e88694cb12bf4d119ea21ed8607f">operator*=</a> (const <a class="el" href="#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a> &amp;other)</td></tr>
+<tr class="memdesc:aeb04e88694cb12bf4d119ea21ed8607f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Умножение.  <br /></td></tr>
+<tr class="memitem:a99ad77518191998dec31988b9390fc87" id="r_a99ad77518191998dec31988b9390fc87"><td class="memItemLeft"><a class="el" href="#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a99ad77518191998dec31988b9390fc87">operator/=</a> (const <a class="el" href="#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a> &amp;other)</td></tr>
+<tr class="memdesc:a99ad77518191998dec31988b9390fc87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деление с усечением к нулю.  <br /></td></tr>
+<tr class="memitem:ad0c2dde08e2070e39027a33bae9fd2ee" id="r_ad0c2dde08e2070e39027a33bae9fd2ee"><td class="memItemLeft"><a class="el" href="#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ad0c2dde08e2070e39027a33bae9fd2ee">operator++</a> ()</td></tr>
+<tr class="memdesc:ad0c2dde08e2070e39027a33bae9fd2ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Префиксный инкремент.  <br /></td></tr>
+<tr class="memitem:acf69ca2d624f07f9b8b8f5c0eddaaff6" id="r_acf69ca2d624f07f9b8b8f5c0eddaaff6"><td class="memItemLeft"><a class="el" href="#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a>&#160;</td><td class="memItemRight"><a class="el" href="#acf69ca2d624f07f9b8b8f5c0eddaaff6">operator++</a> (int)</td></tr>
+<tr class="memdesc:acf69ca2d624f07f9b8b8f5c0eddaaff6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Постфиксный инкремент.  <br /></td></tr>
+<tr class="memitem:adcfff76ca764251e90d3df5969b956d1" id="r_adcfff76ca764251e90d3df5969b956d1"><td class="memItemLeft"><a class="el" href="#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#adcfff76ca764251e90d3df5969b956d1">operator--</a> ()</td></tr>
+<tr class="memdesc:adcfff76ca764251e90d3df5969b956d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Префиксный декремент.  <br /></td></tr>
+<tr class="memitem:a55b8ec7cd98167f23a7bd25c501c2819" id="r_a55b8ec7cd98167f23a7bd25c501c2819"><td class="memItemLeft"><a class="el" href="#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a>&#160;</td><td class="memItemRight"><a class="el" href="#a55b8ec7cd98167f23a7bd25c501c2819">operator--</a> (int)</td></tr>
+<tr class="memdesc:a55b8ec7cd98167f23a7bd25c501c2819"><td class="mdescLeft">&#160;</td><td class="mdescRight">Постфиксный декремент.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Закрытые члены</h2></td></tr>
+<tr class="memitem:ad06119dc308773d5d3deba38659841e7" id="r_ad06119dc308773d5d3deba38659841e7"><td class="memItemLeft"><a id="ad06119dc308773d5d3deba38659841e7" name="ad06119dc308773d5d3deba38659841e7"></a>
+void&#160;</td><td class="memItemRight"><b>normalize</b> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a81ce241d7ae01807868e4db503b0e490" id="r_a81ce241d7ae01807868e4db503b0e490"><td class="memItemLeft"><a id="a81ce241d7ae01807868e4db503b0e490" name="a81ce241d7ae01807868e4db503b0e490"></a>
+bool&#160;</td><td class="memItemRight"><b>negative_</b> = false</td></tr>
+<tr class="memitem:a237c8c1eaca73a71587fa0c7e9254532" id="r_a237c8c1eaca73a71587fa0c7e9254532"><td class="memItemLeft"><a id="a237c8c1eaca73a71587fa0c7e9254532" name="a237c8c1eaca73a71587fa0c7e9254532"></a>
+std::vector&lt; std::uint32_t &gt;&#160;</td><td class="memItemRight"><b>digits_</b></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Знаковое целое число неограниченной длины. </p>
+<p>Число хранится как знак и модуль. Модуль - массив "цифр" в системе счисления 10^9 (младшая цифра первая), ноль представлен пустым массивом и всегда неотрицателен. Конструктор от long long не помечен explicit намеренно: благодаря этому все операции автоматически работают и с обычными целыми (a + 5, 5 + a, a &lt; 5). Деление усекает результат к нулю, как и деление встроенных целых. Копирование выполняется конструктором и оператором присваивания, сгенерированными компилятором: std::vector сам корректно копирует и освобождает память (правило нуля). </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="a00ed3dbed8e7325907255a0d9b451026" name="a00ed3dbed8e7325907255a0d9b451026"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00ed3dbed8e7325907255a0d9b451026">&#9670;&#160;</a></span>BigInteger()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">lab1::BigInteger::BigInteger </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>text</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Создаёт число из строки вида "[+|-]цифры". </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>десятичная запись числа </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>если строка пуста или содержит недопустимые символы </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="a602ddf1746b5cf9a87160e04b56356d9" name="a602ddf1746b5cf9a87160e04b56356d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a602ddf1746b5cf9a87160e04b56356d9">&#9670;&#160;</a></span>compareTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int lab1::BigInteger::compareTo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Возвращает</dt><dd>отрицательное значение, 0 или положительное: результат сравнения с other </dd></dl>
+
+</div>
+</div>
+<a id="ae6cf60adc642fb6d52ab90f7a3337250" name="ae6cf60adc642fb6d52ab90f7a3337250"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6cf60adc642fb6d52ab90f7a3337250">&#9670;&#160;</a></span>isNegative()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lab1::BigInteger::isNegative </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Возвращает</dt><dd>true, если число меньше нуля </dd></dl>
+
+</div>
+</div>
+<a id="a298b6169cf23e394d509034646b7a8e7" name="a298b6169cf23e394d509034646b7a8e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a298b6169cf23e394d509034646b7a8e7">&#9670;&#160;</a></span>isZero()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lab1::BigInteger::isZero </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Возвращает</dt><dd>true, если число равно нулю </dd></dl>
+
+</div>
+</div>
+<a id="ab37ef28901ab2e7dd101c9eb03f1cee1" name="ab37ef28901ab2e7dd101c9eb03f1cee1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab37ef28901ab2e7dd101c9eb03f1cee1">&#9670;&#160;</a></span>operator long long()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">lab1::BigInteger::operator long long </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Приведение к встроенному целому типу. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>значение числа </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::overflow_error</td><td>если число не помещается в long long </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aeb04e88694cb12bf4d119ea21ed8607f" name="aeb04e88694cb12bf4d119ea21ed8607f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb04e88694cb12bf4d119ea21ed8607f">&#9670;&#160;</a></span>operator*=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a> &amp; lab1::BigInteger::operator*= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Умножение. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>ссылка на себя </dd></dl>
+
+</div>
+</div>
+<a id="ad0c2dde08e2070e39027a33bae9fd2ee" name="ad0c2dde08e2070e39027a33bae9fd2ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0c2dde08e2070e39027a33bae9fd2ee">&#9670;&#160;</a></span>operator++() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a> &amp; lab1::BigInteger::operator++ </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Префиксный инкремент. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>ссылка на себя </dd></dl>
+
+</div>
+</div>
+<a id="acf69ca2d624f07f9b8b8f5c0eddaaff6" name="acf69ca2d624f07f9b8b8f5c0eddaaff6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf69ca2d624f07f9b8b8f5c0eddaaff6">&#9670;&#160;</a></span>operator++() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a> lab1::BigInteger::operator++ </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Постфиксный инкремент. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>значение до увеличения </dd></dl>
+
+</div>
+</div>
+<a id="ab0dc6951c4ab7d8719b0648708bf41e4" name="ab0dc6951c4ab7d8719b0648708bf41e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0dc6951c4ab7d8719b0648708bf41e4">&#9670;&#160;</a></span>operator+=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a> &amp; lab1::BigInteger::operator+= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сложение. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>ссылка на себя </dd></dl>
+
+</div>
+</div>
+<a id="ab82e5252e591e9fe80d89c104cfd78db" name="ab82e5252e591e9fe80d89c104cfd78db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab82e5252e591e9fe80d89c104cfd78db">&#9670;&#160;</a></span>operator-()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a> lab1::BigInteger::operator- </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Возвращает</dt><dd>число с противоположным знаком </dd></dl>
+
+</div>
+</div>
+<a id="adcfff76ca764251e90d3df5969b956d1" name="adcfff76ca764251e90d3df5969b956d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcfff76ca764251e90d3df5969b956d1">&#9670;&#160;</a></span>operator--() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a> &amp; lab1::BigInteger::operator-- </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Префиксный декремент. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>ссылка на себя </dd></dl>
+
+</div>
+</div>
+<a id="a55b8ec7cd98167f23a7bd25c501c2819" name="a55b8ec7cd98167f23a7bd25c501c2819"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55b8ec7cd98167f23a7bd25c501c2819">&#9670;&#160;</a></span>operator--() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a> lab1::BigInteger::operator-- </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Постфиксный декремент. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>значение до уменьшения </dd></dl>
+
+</div>
+</div>
+<a id="ab34e84f137ccd43c0da698b58447ee8c" name="ab34e84f137ccd43c0da698b58447ee8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab34e84f137ccd43c0da698b58447ee8c">&#9670;&#160;</a></span>operator-=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a> &amp; lab1::BigInteger::operator-= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Вычитание. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>ссылка на себя </dd></dl>
+
+</div>
+</div>
+<a id="a99ad77518191998dec31988b9390fc87" name="a99ad77518191998dec31988b9390fc87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99ad77518191998dec31988b9390fc87">&#9670;&#160;</a></span>operator/=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a> &amp; lab1::BigInteger::operator/= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a5f1d30d40a0021f987fcd1c4ee59893c">BigInteger</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Деление с усечением к нулю. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>делитель </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>ссылка на себя </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::domain_error</td><td>если делитель равен нулю </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7b9a296acd98d19e243833ff6cfd072c" name="a7b9a296acd98d19e243833ff6cfd072c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b9a296acd98d19e243833ff6cfd072c">&#9670;&#160;</a></span>toString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string lab1::BigInteger::toString </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Возвращает</dt><dd>десятичная запись числа </dd></dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>include/<a class="el" href="_big_integer_8h_source.html">BigInteger.h</a></li>
+<li>src/<a class="el" href="_big_integer_8cpp.html">BigInteger.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>lab1</b></li><li class="navelem"><a href="classlab1_1_1_big_integer.html">BigInteger</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ППОИС. Лабораторная работа 1: Исходный файл include/Point3D.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ППОИС. Лабораторная работа 1
+   </div>
+   <div id="projectbrief">Вектор в трёхмерном пространстве и длинное целое со знаком</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('_point3_d_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Point3D.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_point3_d_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef LAB1_POINT3D_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define LAB1_POINT3D_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;iosfwd&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span>lab1 {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="_point3_d_8h.html#abfaadd1e44dc720e0d04f249adbada49">   14</a></span><span class="keyword">constexpr</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="_point3_d_8h.html#abfaadd1e44dc720e0d04f249adbada49">kCoordinateEpsilon</a> = 1e-9;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classlab1_1_1_point3_d.html">   22</a></span><span class="keyword">class </span><a class="code hl_function" href="classlab1_1_1_point3_d.html#aad42c20a2ca67d055600b362d35d4cd3">Point3D</a> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classlab1_1_1_point3_d.html#aad42c20a2ca67d055600b362d35d4cd3">   25</a></span>    <a class="code hl_function" href="classlab1_1_1_point3_d.html#aad42c20a2ca67d055600b362d35d4cd3">Point3D</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_function" href="classlab1_1_1_point3_d.html#aad42c20a2ca67d055600b362d35d4cd3">Point3D</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">double</span> z);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="classlab1_1_1_point3_d.html#a757a8b871cbd81872f0726b58503b8d7">getX</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="classlab1_1_1_point3_d.html#a5abd463e58a414dce60223f00780b532">getY</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="classlab1_1_1_point3_d.html#a176be2564adcad0c0754827a87b46992">getZ</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_function" href="classlab1_1_1_point3_d.html#aad42c20a2ca67d055600b362d35d4cd3">Point3D</a>&amp; <a class="code hl_function" href="classlab1_1_1_point3_d.html#a07637cde543e99b670bfe4685c65fb84">operator+=</a>(<span class="keyword">const</span> <a class="code hl_function" href="classlab1_1_1_point3_d.html#aad42c20a2ca67d055600b362d35d4cd3">Point3D</a>&amp; other);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_function" href="classlab1_1_1_point3_d.html#aad42c20a2ca67d055600b362d35d4cd3">Point3D</a>&amp; <a class="code hl_function" href="classlab1_1_1_point3_d.html#aa73df854e30ba11168aa8fcf51c4e4cc">operator-=</a>(<span class="keyword">const</span> <a class="code hl_function" href="classlab1_1_1_point3_d.html#aad42c20a2ca67d055600b362d35d4cd3">Point3D</a>&amp; other);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <a class="code hl_function" href="classlab1_1_1_point3_d.html#aad42c20a2ca67d055600b362d35d4cd3">Point3D</a>&amp; <a class="code hl_function" href="classlab1_1_1_point3_d.html#a76c0754a7158a5448adc74018468ecee">operator*=</a>(<span class="keywordtype">double</span> factor);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_function" href="classlab1_1_1_point3_d.html#aad42c20a2ca67d055600b362d35d4cd3">Point3D</a>&amp; <a class="code hl_function" href="classlab1_1_1_point3_d.html#a2a1874b8e1ff6eb05dd610c3b9c23648">operator/=</a>(<span class="keywordtype">double</span> divisor);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="classlab1_1_1_point3_d.html#a3b4e01a89c9595c8f27f8e862f88b1e5">dot</a>(<span class="keyword">const</span> <a class="code hl_function" href="classlab1_1_1_point3_d.html#aad42c20a2ca67d055600b362d35d4cd3">Point3D</a>&amp; other) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_function" href="classlab1_1_1_point3_d.html#aad42c20a2ca67d055600b362d35d4cd3">Point3D</a> <a class="code hl_function" href="classlab1_1_1_point3_d.html#a57fdf799265cb897c337fd6c8ac60cca">cross</a>(<span class="keyword">const</span> <a class="code hl_function" href="classlab1_1_1_point3_d.html#aad42c20a2ca67d055600b362d35d4cd3">Point3D</a>&amp; other) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="classlab1_1_1_point3_d.html#a1da6adc143460855e6eaaa95ea53f979">lengthSquared</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="classlab1_1_1_point3_d.html#a96d9b15d06e166ea395960a28a5b2d6c">length</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">double</span> x_ = 0.0;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">double</span> y_ = 0.0;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">double</span> z_ = 0.0;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>};</div>
+</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><a class="code hl_class" href="classlab1_1_1_point3_d.html">Point3D</a> <a class="code hl_function" href="_big_integer_8h.html#ac2f2decda5fc25cbf997158059295c04">operator+</a>(<a class="code hl_class" href="classlab1_1_1_point3_d.html">Point3D</a> lhs, <span class="keyword">const</span> <a class="code hl_class" href="classlab1_1_1_point3_d.html">Point3D</a>&amp; rhs);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><a class="code hl_class" href="classlab1_1_1_point3_d.html">Point3D</a> <a class="code hl_function" href="_big_integer_8h.html#ac90ef5a4d3d35575f9ea4e8f9f4dff27">operator-</a>(<a class="code hl_class" href="classlab1_1_1_point3_d.html">Point3D</a> lhs, <span class="keyword">const</span> <a class="code hl_class" href="classlab1_1_1_point3_d.html">Point3D</a>&amp; rhs);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><a class="code hl_class" href="classlab1_1_1_point3_d.html">Point3D</a> <a class="code hl_function" href="_big_integer_8h.html#abc71211a80a92456bfde7f7a460bdc7f">operator*</a>(<a class="code hl_class" href="classlab1_1_1_point3_d.html">Point3D</a> point, <span class="keywordtype">double</span> factor);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><a class="code hl_class" href="classlab1_1_1_point3_d.html">Point3D</a> <a class="code hl_function" href="_big_integer_8h.html#a084055f4e7373280395de18cb57f8d2d">operator/</a>(<a class="code hl_class" href="classlab1_1_1_point3_d.html">Point3D</a> point, <span class="keywordtype">double</span> divisor);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_big_integer_8h.html#afb7c448a8d70670da1281a6e32284756">operator==</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlab1_1_1_point3_d.html">Point3D</a>&amp; lhs, <span class="keyword">const</span> <a class="code hl_class" href="classlab1_1_1_point3_d.html">Point3D</a>&amp; rhs);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_big_integer_8h.html#a441f2432a27a543e803c240baa73ee39">operator!=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlab1_1_1_point3_d.html">Point3D</a>&amp; lhs, <span class="keyword">const</span> <a class="code hl_class" href="classlab1_1_1_point3_d.html">Point3D</a>&amp; rhs);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>std::ostream&amp; <a class="code hl_function" href="_big_integer_8h.html#a279a875136880210d8c296497c35b5e6">operator&lt;&lt;</a>(std::ostream&amp; out, <span class="keyword">const</span> <a class="code hl_class" href="classlab1_1_1_point3_d.html">Point3D</a>&amp; point);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>std::istream&amp; <a class="code hl_function" href="_big_integer_8h.html#afcd5bd9ed68cb0d6b2d9c50ff668d0a6">operator&gt;&gt;</a>(std::istream&amp; in, <a class="code hl_class" href="classlab1_1_1_point3_d.html">Point3D</a>&amp; point);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>}  <span class="comment">// namespace lab1</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">#endif  </span><span class="comment">// LAB1_POINT3D_H</span></div>
+<div class="ttc" id="a_big_integer_8h_html_a084055f4e7373280395de18cb57f8d2d"><div class="ttname"><a href="_big_integer_8h.html#a084055f4e7373280395de18cb57f8d2d">lab1::operator/</a></div><div class="ttdeci">BigInteger operator/(BigInteger lhs, const BigInteger &amp;rhs)</div><div class="ttdef"><b>Определения</b> BigInteger.cpp:277</div></div>
+<div class="ttc" id="a_big_integer_8h_html_a279a875136880210d8c296497c35b5e6"><div class="ttname"><a href="_big_integer_8h.html#a279a875136880210d8c296497c35b5e6">lab1::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, const BigInteger &amp;value)</div><div class="ttdoc">Вывод в десятичной записи.</div><div class="ttdef"><b>Определения</b> BigInteger.cpp:286</div></div>
+<div class="ttc" id="a_big_integer_8h_html_a441f2432a27a543e803c240baa73ee39"><div class="ttname"><a href="_big_integer_8h.html#a441f2432a27a543e803c240baa73ee39">lab1::operator!=</a></div><div class="ttdeci">bool operator!=(const BigInteger &amp;lhs, const BigInteger &amp;rhs)</div><div class="ttdoc">Неравенство.</div><div class="ttdef"><b>Определения</b> BigInteger.cpp:280</div></div>
+<div class="ttc" id="a_big_integer_8h_html_abc71211a80a92456bfde7f7a460bdc7f"><div class="ttname"><a href="_big_integer_8h.html#abc71211a80a92456bfde7f7a460bdc7f">lab1::operator*</a></div><div class="ttdeci">BigInteger operator*(BigInteger lhs, const BigInteger &amp;rhs)</div><div class="ttdef"><b>Определения</b> BigInteger.cpp:276</div></div>
+<div class="ttc" id="a_big_integer_8h_html_ac2f2decda5fc25cbf997158059295c04"><div class="ttname"><a href="_big_integer_8h.html#ac2f2decda5fc25cbf997158059295c04">lab1::operator+</a></div><div class="ttdeci">BigInteger operator+(BigInteger lhs, const BigInteger &amp;rhs)</div><div class="ttdef"><b>Определения</b> BigInteger.cpp:274</div></div>
+<div class="ttc" id="a_big_integer_8h_html_ac90ef5a4d3d35575f9ea4e8f9f4dff27"><div class="ttname"><a href="_big_integer_8h.html#ac90ef5a4d3d35575f9ea4e8f9f4dff27">lab1::operator-</a></div><div class="ttdeci">BigInteger operator-(BigInteger lhs, const BigInteger &amp;rhs)</div><div class="ttdef"><b>Определения</b> BigInteger.cpp:275</div></div>
+<div class="ttc" id="a_big_integer_8h_html_afb7c448a8d70670da1281a6e32284756"><div class="ttname"><a href="_big_integer_8h.html#afb7c448a8d70670da1281a6e32284756">lab1::operator==</a></div><div class="ttdeci">bool operator==(const BigInteger &amp;lhs, const BigInteger &amp;rhs)</div><div class="ttdoc">Равенство (работает и для сравнения с обычным целым).</div><div class="ttdef"><b>Определения</b> BigInteger.cpp:279</div></div>
+<div class="ttc" id="a_big_integer_8h_html_afcd5bd9ed68cb0d6b2d9c50ff668d0a6"><div class="ttname"><a href="_big_integer_8h.html#afcd5bd9ed68cb0d6b2d9c50ff668d0a6">lab1::operator&gt;&gt;</a></div><div class="ttdeci">std::istream &amp; operator&gt;&gt;(std::istream &amp;in, BigInteger &amp;value)</div><div class="ttdoc">Чтение числа из потока (одно слово).</div><div class="ttdef"><b>Определения</b> BigInteger.cpp:290</div></div>
+<div class="ttc" id="a_point3_d_8h_html_abfaadd1e44dc720e0d04f249adbada49"><div class="ttname"><a href="_point3_d_8h.html#abfaadd1e44dc720e0d04f249adbada49">lab1::kCoordinateEpsilon</a></div><div class="ttdeci">constexpr double kCoordinateEpsilon</div><div class="ttdoc">Допустимая погрешность при сравнении вещественных чисел.</div><div class="ttdef"><b>Определения</b> Point3D.h:14</div></div>
+<div class="ttc" id="aclasslab1_1_1_point3_d_html"><div class="ttname"><a href="classlab1_1_1_point3_d.html">lab1::Point3D</a></div><div class="ttdoc">Тройка вещественных координат (x, y, z).</div><div class="ttdef"><b>Определения</b> Point3D.h:22</div></div>
+<div class="ttc" id="aclasslab1_1_1_point3_d_html_a07637cde543e99b670bfe4685c65fb84"><div class="ttname"><a href="classlab1_1_1_point3_d.html#a07637cde543e99b670bfe4685c65fb84">lab1::Point3D::operator+=</a></div><div class="ttdeci">Point3D &amp; operator+=(const Point3D &amp;other)</div><div class="ttdoc">Покоординатное сложение.</div><div class="ttdef"><b>Определения</b> Point3D.cpp:29</div></div>
+<div class="ttc" id="aclasslab1_1_1_point3_d_html_a176be2564adcad0c0754827a87b46992"><div class="ttname"><a href="classlab1_1_1_point3_d.html#a176be2564adcad0c0754827a87b46992">lab1::Point3D::getZ</a></div><div class="ttdeci">double getZ() const</div><div class="ttdef"><b>Определения</b> Point3D.cpp:27</div></div>
+<div class="ttc" id="aclasslab1_1_1_point3_d_html_a1da6adc143460855e6eaaa95ea53f979"><div class="ttname"><a href="classlab1_1_1_point3_d.html#a1da6adc143460855e6eaaa95ea53f979">lab1::Point3D::lengthSquared</a></div><div class="ttdeci">double lengthSquared() const</div><div class="ttdef"><b>Определения</b> Point3D.cpp:70</div></div>
+<div class="ttc" id="aclasslab1_1_1_point3_d_html_a2a1874b8e1ff6eb05dd610c3b9c23648"><div class="ttname"><a href="classlab1_1_1_point3_d.html#a2a1874b8e1ff6eb05dd610c3b9c23648">lab1::Point3D::operator/=</a></div><div class="ttdeci">Point3D &amp; operator/=(double divisor)</div><div class="ttdoc">Деление всех координат на число.</div><div class="ttdef"><b>Определения</b> Point3D.cpp:50</div></div>
+<div class="ttc" id="aclasslab1_1_1_point3_d_html_a3b4e01a89c9595c8f27f8e862f88b1e5"><div class="ttname"><a href="classlab1_1_1_point3_d.html#a3b4e01a89c9595c8f27f8e862f88b1e5">lab1::Point3D::dot</a></div><div class="ttdeci">double dot(const Point3D &amp;other) const</div><div class="ttdef"><b>Определения</b> Point3D.cpp:60</div></div>
+<div class="ttc" id="aclasslab1_1_1_point3_d_html_a57fdf799265cb897c337fd6c8ac60cca"><div class="ttname"><a href="classlab1_1_1_point3_d.html#a57fdf799265cb897c337fd6c8ac60cca">lab1::Point3D::cross</a></div><div class="ttdeci">Point3D cross(const Point3D &amp;other) const</div><div class="ttdef"><b>Определения</b> Point3D.cpp:64</div></div>
+<div class="ttc" id="aclasslab1_1_1_point3_d_html_a5abd463e58a414dce60223f00780b532"><div class="ttname"><a href="classlab1_1_1_point3_d.html#a5abd463e58a414dce60223f00780b532">lab1::Point3D::getY</a></div><div class="ttdeci">double getY() const</div><div class="ttdef"><b>Определения</b> Point3D.cpp:26</div></div>
+<div class="ttc" id="aclasslab1_1_1_point3_d_html_a757a8b871cbd81872f0726b58503b8d7"><div class="ttname"><a href="classlab1_1_1_point3_d.html#a757a8b871cbd81872f0726b58503b8d7">lab1::Point3D::getX</a></div><div class="ttdeci">double getX() const</div><div class="ttdef"><b>Определения</b> Point3D.cpp:25</div></div>
+<div class="ttc" id="aclasslab1_1_1_point3_d_html_a76c0754a7158a5448adc74018468ecee"><div class="ttname"><a href="classlab1_1_1_point3_d.html#a76c0754a7158a5448adc74018468ecee">lab1::Point3D::operator*=</a></div><div class="ttdeci">Point3D &amp; operator*=(double factor)</div><div class="ttdoc">Умножение всех координат на число.</div><div class="ttdef"><b>Определения</b> Point3D.cpp:43</div></div>
+<div class="ttc" id="aclasslab1_1_1_point3_d_html_a96d9b15d06e166ea395960a28a5b2d6c"><div class="ttname"><a href="classlab1_1_1_point3_d.html#a96d9b15d06e166ea395960a28a5b2d6c">lab1::Point3D::length</a></div><div class="ttdeci">double length() const</div><div class="ttdef"><b>Определения</b> Point3D.cpp:72</div></div>
+<div class="ttc" id="aclasslab1_1_1_point3_d_html_aa73df854e30ba11168aa8fcf51c4e4cc"><div class="ttname"><a href="classlab1_1_1_point3_d.html#aa73df854e30ba11168aa8fcf51c4e4cc">lab1::Point3D::operator-=</a></div><div class="ttdeci">Point3D &amp; operator-=(const Point3D &amp;other)</div><div class="ttdoc">Покоординатное вычитание.</div><div class="ttdef"><b>Определения</b> Point3D.cpp:36</div></div>
+<div class="ttc" id="aclasslab1_1_1_point3_d_html_aad42c20a2ca67d055600b362d35d4cd3"><div class="ttname"><a href="classlab1_1_1_point3_d.html#aad42c20a2ca67d055600b362d35d4cd3">lab1::Point3D::Point3D</a></div><div class="ttdeci">Point3D()=default</div><div class="ttdoc">Создаёт точку в начале координат.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>include</b></li><li class="navelem"><a href="_point3_d_8h.html">Point3D.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>
